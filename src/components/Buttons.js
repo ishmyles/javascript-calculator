@@ -1,13 +1,13 @@
-import { Fragment } from "react";
 import Button from "./Button";
 import "../assets/styles/Buttons.css";
 
-function Buttons() {
+function Buttons({ calcBtns }) {
   return (
-    <Fragment>
-      <h4>Buttons Component</h4>
-      <Button />
-    </Fragment>
+    <div id="buttons">
+      {calcBtns.map((button) => (
+        <Button button={button} key={button.id} />
+      ))}
+    </div>
   );
 }
 
