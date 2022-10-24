@@ -1,10 +1,14 @@
 import "../assets/styles/DisplayScreen.css";
 
-function DisplayScreen(props) {
+function DisplayScreen({ currentValue, equation }) {
   return (
     <div id="display-screen">
-      <p id="display"></p>
-      <p id="equation"></p>
+      <p id="display" className="text-right">
+        {currentValue}
+      </p>
+      <p id="equation" className="text-right">
+        {equation}
+      </p>
     </div>
   );
 }
