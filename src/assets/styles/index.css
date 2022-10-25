@@ -16,11 +16,21 @@ code {
     monospace;
 }
 
-
 #attribution {
+  background-color: rgba(0, 0, 0, 0.300);
+  color: white;
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 5px 0;
   text-align: center;
+}
+
+#attribution > a {
+  color: #0096c7;
+}
+
+@font-face {
+  font-family: "Digital";
+  src: url(../fonts/digital-7.ttf);
 }

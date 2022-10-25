@@ -1,4 +1,9 @@
+:root {
+  --bg-black: #22223b;
+}
+
 .App {
+  background-color: var(--bg-black);
   display: flex;
   justify-content: center;
   align-items: center;

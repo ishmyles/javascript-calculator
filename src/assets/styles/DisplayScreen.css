@@ -1,22 +1,69 @@
+:root {
+    --border-grey: 1px solid #495057; 
+    --border-bottom-grey: 0.5px solid #495057; ;
+}
+
 #display-screen {
+    background-color: #000000;
     width: 100%;
     height: 30%;
     padding: 20px;
-    border: 1px solid black;
+    border: var(--border-grey);
+    border-bottom: var(--border-bottom-grey);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
 }
 
-#display {
-    font-size: 4.5em;
+#top-display, #bottom-display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#top-display {
     width: 100%;
     height: 70%;
 }
 
-#equation {
-    font-size: 1.5em;
+#bottom-display {
     width: 100%;
     height: 30%;
 }
 
+#display {
+    font-size: 2.5em;
+}
+
+#equation {
+    font-size: 1.2em;
+}
+
+.text-digital {
+    font-family: "Digital", sans-serif;
+}
+
+.text-blue {
+    color: #8cc5f3;
+}
+
+.text-white {
+    color: white;
+}
+
 .text-right {
     text-align: end;
+}
+
+@media (min-width: 1000px) {
+    #display-screen {
+        height: 30%;
+    }
+
+    #display {
+        font-size: 4.5em;
+    }
+
+    #equation {
+        font-size: 1.5em;
+    }
 }

@@ -16,7 +16,7 @@ const calcBtns = [
   },
   {
     id: "multiply",
-    key: "X",
+    key: "x",
     type: "operator",
   },
   {
@@ -107,7 +107,7 @@ const getOperator = {
 function Calculator() {
   let [result, setResult] = useState(0);
   let [equation, setEquation] = useState("");
-  let [currentValue, setCurrentValue] = useState("");
+  let [currentValue, setCurrentValue] = useState("0");
   let [currentOperation, setCurrentOperation] = useState("");
 
   const operations = {
@@ -166,7 +166,7 @@ function Calculator() {
         setCurrentOperation(operator);
       } else {
         // Runs the relevant calculation when pressing one of the operator buttons
-        operations[currentOperation]();
+        currentOperation && operations[currentOperation]();
         setCurrentOperation(operator);
         setEquation((equation += operationSymbol));
         if (operator === "equals") operations[operator]();

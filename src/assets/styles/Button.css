@@ -1,6 +1,12 @@
 :root {
-    --black-border: 1px solid black;
-    --btn-bg-white: white;
+    --btn-border: 0.5px solid #495057;
+    --btn-border-white: rgb(203, 202, 202);
+    --btn-bg-grey: hsla(0, 0%, 25%, 0.5);
+    --btn-bg-dark-grey: hsla(0, 0%, 12%, 0.500);
+    --btn-bg-darker-grey: hsla(0, 3%, 6%, 0.502);
+    --btn-bg-blue: rgba(140, 197, 243, 0.400);
+    --btn-font: "Roboto", sans-serif;
+    --text-white: white;
 }
 
 #clear { 
@@ -76,6 +82,47 @@
 }
 
 .btn {
-    background-color: var(--btn-bg-white);
-    border: var(--black-border);
+    color: var(--text-white);
+    font-family: var(--btn-font);
+    font-size: 1.2em;
+    border: var(--btn-border);
+}
+
+.btn:hover {
+    filter: brightness(70%);
+}
+
+.btn:active {
+    filter: brightness(120%);
+    border-color: var(--btn-border-white);
+}
+
+.btn-numerical {
+    background-color: var(--btn-bg-dark-grey);
+}
+
+.btn-operator {
+    background-color: var(--btn-bg-darker-grey);
+}
+
+.btn-equals {
+    background-color: var(--btn-bg-blue);
+}
+
+.btn-delete {
+    background-color: var(--btn-bg-grey);
+}
+
+#zero {
+    border-bottom-left-radius: inherit;
+}
+
+#equals {
+    border-bottom-right-radius: inherit;
+}
+
+@media (min-width: 1000px) {
+    .btn {
+        font-size: 1.5em;
+    }
 }
